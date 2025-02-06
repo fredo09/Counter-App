@@ -12,15 +12,15 @@ interface Props  {
 export const FloatingButton = ({ onPress, onLongPress, label, position = 'center' }: Props) => {
     return (
         <Pressable
-        style={({ pressed }) => [
-            styles.floatingButton,
-            position === 'right' && styles.positionRight,
-            position === 'left' && styles.positionLeft,
-            position === 'center' && styles.positionCenter,
-            pressed ? { opacity: 0.5 } : { opacity: 1 },
-        ]}
-        onPress={onPress}
-        onLongPress={onLongPress}
+            style={({ pressed }) => [
+                styles.floatingButton,
+                position === 'right' && styles.positionRight,
+                position === 'left' && styles.positionLeft,
+                position === 'center' && styles.positionCenter,
+                pressed ? { opacity: 0.5 } : { opacity: 1 },
+            ]}
+            onPress={onPress}
+            onLongPress={onLongPress}
         >
             <Text style={styles.colorCounterBtn}>{label}</Text>
         </Pressable>
